@@ -7,6 +7,7 @@ import { UserListComponent } from './pages/user-list/user-list.component';
 import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
 import { UserComponent } from './components/user/user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,6 +22,8 @@ import { UserComponent } from './components/user/user.component';
     CommonModule,
     UsersRoutingModule,
     CdkTableModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class UsersModule { }

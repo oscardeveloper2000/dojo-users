@@ -17,6 +17,15 @@ export class DataSourceUser extends DataSource<User> {
     this.data.next(data);
   }
 
+  find(query: string) {
+    const filterUsers = this.originalData
+    .filter(item => {
+      const word = `${item.name}`;
+      return word.toLowerCase().includes(query.toLowerCase())
+    });
+    this.data.next(filterUsers);
+  }
+
   disconnect() { }
 
 }
