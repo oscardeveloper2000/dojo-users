@@ -1,1 +1,29 @@
-<p>users-table works!</p>
+<!-- <p>users-table works!</p> -->
+<table cdk-table [dataSource]="dataSource">
+  <!-- Position Column -->
+  <ng-container cdkColumnDef="id">
+    <th cdk-header-cell *cdkHeaderCellDef>Id.</th>
+    <td cdk-cell *cdkCellDef="let element">{{ element.id }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container cdkColumnDef="name">
+    <th cdk-header-cell *cdkHeaderCellDef>Name</th>
+    <td cdk-cell *cdkCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container cdkColumnDef="email">
+    <th cdk-header-cell *cdkHeaderCellDef>Weight</th>
+    <td cdk-cell *cdkCellDef="let element">{{ element.email }}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container cdkColumnDef="phone">
+    <th cdk-header-cell *cdkHeaderCellDef>Phone</th>
+    <td cdk-cell *cdkCellDef="let element">{{ element.phone }}</td>
+  </ng-container>
+
+  <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+</table>
