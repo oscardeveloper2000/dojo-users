@@ -25,6 +25,15 @@
     <td cdk-cell *cdkCellDef="let element">{{ element.phone }}</td>
   </ng-container>
 
+  <!-- Actions Column -->
+  <ng-container cdkColumnDef="actions">
+    <th cdk-header-cell class="py-3 px-6" *cdkHeaderCellDef>Actions</th>
+    <td cdk-cell class="py-4 px-6" *cdkCellDef="let row">
+      <button [routerLink]="['../detail/', row.id]">Ver detalle</button>
+    </td>
+    <td cdk-footer-cell class="py-3 px-6" *cdkFooterCellDef></td>
+  </ng-container>
+
   <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
   <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
 </table>

@@ -11,9 +11,8 @@ import { UsersService } from '../../../../services/users.service';
   styleUrls: ['./users-table.component.scss']
 })
 export class UsersTableComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'email', 'phone'];
+  displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'actions'];
   dataSource = new DataSourceUser();
-  user: User | null = null;
   inputFilter = new FormControl('', { nonNullable: true })
 
   constructor(
@@ -22,7 +21,7 @@ export class UsersTableComponent implements OnInit {
 
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
-    this.usersService.getUsers()
+    this.usersService.users$
     .subscribe(users => {
       this.dataSource.init(users);
     })

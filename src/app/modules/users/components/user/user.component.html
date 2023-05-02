@@ -1,1 +1,33 @@
 <!-- <p>user works!</p> -->
+<!-- <ng-container> -->
+
+  <div >
+    <div>
+      <h3 >{{ user?.name }}</h3>
+      <ul>
+        <li>Username: {{user?.username}}</li>
+        <li>Email: {{user?.email}}</li>
+        <li>Street: {{user?.address?.street}}</li>
+        <li>Suite: {{user?.address?.suite}}</li>
+        <li>City: {{user?.address?.city}}</li>
+        <li>Address:
+          <ul>
+            <li>Zipcode: {{user?.address?.zipcode}}</li>
+            <li>Lat: {{user?.address?.geo?.lat}}</li>
+            <li>Lng: {{user?.address?.geo?.lng}}</li>
+          </ul>
+        </li>
+        <li>Phone: {{user?.phone}}</li>
+        <li>Website: {{user?.website}}</li>
+        <li>Company:
+          <ul>
+            <li> {{user?.company?.name}}</li>
+            <li> {{user?.company?.catchPhrase}}</li>
+            <li> {{user?.company?.bs}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+</div>
+
+<!-- </ng-container> -->
