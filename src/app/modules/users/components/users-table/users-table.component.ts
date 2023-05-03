@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataSourceUser } from './data-source';
 import { FormControl } from '@angular/forms';
 
-import { User } from '@models/user.model';
+
 import { UsersService } from '../../../../services/users.service';
 
 @Component({

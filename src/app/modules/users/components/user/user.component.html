@@ -1,33 +1,31 @@
 <!-- <p>user works!</p> -->
 <!-- <ng-container> -->
 
-  <div >
-    <div>
-      <h3 >{{ user?.name }}</h3>
-      <ul>
-        <li>Username: {{user?.username}}</li>
-        <li>Email: {{user?.email}}</li>
-        <li>Street: {{user?.address?.street}}</li>
-        <li>Suite: {{user?.address?.suite}}</li>
-        <li>City: {{user?.address?.city}}</li>
-        <li>Address:
-          <ul>
-            <li>Zipcode: {{user?.address?.zipcode}}</li>
-            <li>Lat: {{user?.address?.geo?.lat}}</li>
-            <li>Lng: {{user?.address?.geo?.lng}}</li>
-          </ul>
-        </li>
-        <li>Phone: {{user?.phone}}</li>
-        <li>Website: {{user?.website}}</li>
-        <li>Company:
-          <ul>
-            <li> {{user?.company?.name}}</li>
-            <li> {{user?.company?.catchPhrase}}</li>
-            <li> {{user?.company?.bs}}</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-</div>
+  <article class="user">
+      <section class="user__info">
+        <h3 class="user__info__title" >{{ user?.name }}</h3>
+        <div class="user__info__basic">
+          <span>Username: {{user?.username}}</span>
+          <span>Email: {{user?.email}}</span>
+          <span>Street: {{user?.address?.street}}</span>
+          <span>Suite: {{user?.address?.suite}}</span>
+          <span>City: {{user?.address?.city}}</span>
+          <span>Phone: {{user?.phone}}</span>
+          <span>Website: {{user?.website}}</span>
+        </div>
+        <div class="user__info__address">
+          <h4 class="user__info__address_title">Address:</h4>
+          <span>Zipcode: {{user?.address?.zipcode}}</span>
+          <span>Lat: {{user?.address?.geo?.lat}}</span>
+          <span>Lng: {{user?.address?.geo?.lng}}</span>
+        </div>
+        <div class="user__info__company">Company:
+          <h4 class="user__info__company_title">Company:</h4>
+          <span>name: {{user?.company?.name}}</span>
+          <span> {{user?.company?.catchPhrase}}</span>
+          <span> {{user?.company?.bs}}</span>
+        </div>
+      </section>
+</article>
 
 <!-- </ng-container> -->
