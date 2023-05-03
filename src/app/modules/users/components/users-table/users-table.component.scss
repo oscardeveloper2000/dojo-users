@@ -1,3 +1,4 @@
+
 // Mixing to make breakpoints a little easier. Can be expanded with any breakpoints as needed.
 @mixin breakpoint($point) {
   @media (min-width: 48rem)  { @content ; }
@@ -9,6 +10,13 @@ $table-wrapped-header: 120px;
 $table-cell-padding: 6px;
 $color-table: #47b48f;
 $color-table-body: #defaf0;
+$padding: 10px;
+$margin: 10px;
+
+$screen-desktop: 950px;
+$screen-tablet: 750px;
+
+$size: 30px;
 
 ::ng-deep {
   thead {
@@ -167,6 +175,16 @@ $color-table-body: #defaf0;
     //}
   }
 
+}
+
+@media screen and (min-width: $screen-desktop) {
+  .table{
+    margin: auto;
+  }
+  .filter{
+    margin: auto;
+    width: 900px;
+  }
 }
 
 // Cosmetics
